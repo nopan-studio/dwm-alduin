@@ -27,6 +27,9 @@ sudo make clean install
 print "installing st"
 cd ~/.dwm/apps/st/
 sudo make clean install
+print "installing dwmblocks"
+cd ~/.dwm/apps/dwmblocks/
+sudo make clean install
 
 print "everything is now installed."
 
