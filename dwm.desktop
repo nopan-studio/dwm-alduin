@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Name=dwm
+Comment=dwm
+Exec=dbus-run-session dwm
+Type=Application
