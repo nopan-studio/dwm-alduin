@@ -9,11 +9,11 @@ configuration {
 }
 
 * {
-    background-color:      #1c1c1c;
-    border-color:          #1c1c1c;
-    text-color:           #dfdfaf;
+    background-color:       #1c1c1c;
+    border-color:           #1c1c1c;
+    text-color:             #dfdfaf;
     vertical-align:         0.5;
-    font:            "Spleen 10";
+    font:            "TerminessTTF Nerd Font 10";
 }
 window {
     anchor:     north;

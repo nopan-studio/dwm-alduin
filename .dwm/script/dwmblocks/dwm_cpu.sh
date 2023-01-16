@@ -13,8 +13,8 @@ dwm_resources () {
 	CPU=$(top -bn1 | grep Cpu | awk '{print $2}')
 
 	printf "%s" "$SEP1"
-    printf "^c$red^ ﱢ ^c$foreground^[%s%%]" "$CPU"
-	printf "\n%s" "$SEP2"
+  printf "[%s%%]" "$CPU"
+	printf "%s" "$SEP2"
 }
 
 dwm_resources

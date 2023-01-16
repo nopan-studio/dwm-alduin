@@ -14,7 +14,7 @@ dwm_resources () {
 	MEMUSED=$(echo $free_output | awk '{print $3}'rose)
 
 	printf "%s" "$SEP1"
-    printf "^c$green^ ﱢ ^c$foreground^[%s]" "$MEMUSED"
+  printf "[%s]" "$MEMUSED"
 	printf "%s" "$SEP2"
 }
 

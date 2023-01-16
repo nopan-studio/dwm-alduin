@@ -6,7 +6,7 @@
 * {
     background-color:       @background;
     text-color:             @foreground;
-	font:				 	"Terminus 11px";
+	font:				 	"Terminess TTF Nerd Font 11px";
 }
 
 window {

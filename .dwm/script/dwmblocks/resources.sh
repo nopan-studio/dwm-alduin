@@ -18,5 +18,5 @@ export yellow=#af875f
 export IDENTIFIER=""
 
 # separators
-export SEP1=""
+export SEP1="^c#dfdfaf^"
 export SEP2=""

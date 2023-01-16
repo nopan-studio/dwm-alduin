@@ -3,7 +3,7 @@
 
 configuration {
     show-icons:            true;
-    display-drun:           "";
+    display-drun:           "search";
     drun-display-format:    "{name}";
     disable-history:        false;
     click-to-exit:          true;
@@ -13,7 +13,7 @@ configuration {
 @import "new_colors.rasi"
 
 * {
-    font:                          "Terminus 10px";
+    font:                          "TerminessTTF Nerd Font 11px";
     background-color:             	@background;
 }
 
@@ -37,9 +37,9 @@ prompt {
     border: 						0;
     border-radius: 					0px;
     background-color:             	@background-alt;
-    text-color: 					@foreground;
-    padding:    					6px 20px 0px 14px;
-    font:                           "Iosevka Nerd Font 13px";
+    text-color: 					@yellow;
+    padding:    					8px 6px 6px 6px;
+    font:                           "TerminessTTF Nerd Font 11px";
 }
 
 textbox-prompt-colon {
@@ -47,7 +47,7 @@ textbox-prompt-colon {
     str: 							"";
     padding:    					6px 4px 6px 4px;
     text-color: 					inherit;
-    font:                           "Iosevka Nerd Font 13px";
+    font:                           "TerminessTTF Nerd Font 11px";
 }
 
 entry {
@@ -56,7 +56,7 @@ entry {
     horizontal-align:               0;
     text-color: 					@foreground;
     placeholder-color:              @foreground;
-    placeholder:                    "search.";
+    placeholder:                    "";
     background-color:             	@background-alt;
     padding:    					8px 5px 6px 10px;
     border: 						0px 0px 0px 0px;
@@ -87,7 +87,7 @@ mainbox {
 
 listview {
     lines:							6;
-    columns:					    2;
+    columns:					    1;
     fixed-height: 			    	0;
     border: 						0px;
     border-color: 					@foreground;

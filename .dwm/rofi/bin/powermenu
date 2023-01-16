@@ -10,11 +10,11 @@ rofi_command="rofi -theme $DIR/rofi/themes/powermenu.rasi"
 uptime=$(uptime -p | sed -e 's/up //g')
 
 # Options
-shutdown=" Shutdown"
-reboot=" Reboot"
-lock=" Lock"
-suspend=" Sleep"
-logout=" Logout"
+shutdown="  Shutdown"
+reboot="  Reboot"
+lock="  Lock"
+suspend="  Sleep"
+logout="  Logout"
 
 #shutdown="종료"
 #reboot="리부트"
@@ -35,48 +35,20 @@ _msg="Options  -  yes / y / no / n"
 chosen="$(echo -e "$options" | $rofi_command -p "UP - $uptime" -dmenu)"
 case $chosen in
     $shutdown)
-		ans=$($HOME/.dwm/rofi/bin/confirm)
-		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-			loginctl poweroff
-		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
-			exit
-        else
-			rofi -theme ~/.dwm/rofi/themes/askpass.rasi -e "$_msg"
-        fi
+		loginctl poweroff
         ;;
     $reboot)
-		ans=$($HOME/.dwm/rofi/bin/confirm)
-		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-			loginctl reboot
-		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
-			exit
-        else
-			rofi -theme ~/.dwm/rofi/themes/askpass.rasi -e "$_msg"
-        fi
+		loginctl reboot
         ;;
     $lock)
         betterlockscreen --lock
         ;;
     $suspend)
-		ans=$($HOME/.dwm/rofi/bin/confirm)
-		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-			mpc -q pause
-			amixer set Master mute
-			betterlockscreen --suspend
-		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
-			exit
-        else
-			rofi -theme ~/.dwm/rofi/themes/askpass.rasi -e "$_msg"
-        fi
+		mpc -q pause
+		amixer set Master mute
+		betterlockscreen --suspend
         ;;
     $logout)
-		ans=$($HOME/.dwm/rofi/bin/confirm)
-		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-			pkill dwm
-		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
-			exit
-        else
-			rofi -theme ~/.dwm/rofi/themes/askpass.rasi -e "$_msg"
-        fi
+		pkill dwm
         ;;
 esac

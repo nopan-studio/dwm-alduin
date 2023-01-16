@@ -27,15 +27,15 @@ dwm_alsa () {
 		fi
     else
     	if [ "$STATUS" = "off" ]; then
-    		printf "^c$blue^ﱢ^c$foreground^ [muted]"
+    		printf "^[muted]"
     	else
 	        # removed this line because it may get confusing
 	        if [ "$VOL" -gt 0 ] && [ "$VOL" -le 33 ]; then
-					printf "^c$blue^ﱢ^c$foreground^ [%s%%]" "$VOL"
+					printf "[%s%%] " "$VOL"
 	        elif [ "$VOL" -gt 33 ] && [ "$VOL" -le 66 ]; then
-					printf "^c$blue^ﱢ^c$foreground^ [%s%%]" "$VOL"
+					printf "[%s%%]" "$VOL"
 	        else
-					printf "^c$blue^ﱢ^c$foreground^ [%s%%]" "$VOL"
+					printf "[%s%%]" "$VOL"
 
         	fi
         fi

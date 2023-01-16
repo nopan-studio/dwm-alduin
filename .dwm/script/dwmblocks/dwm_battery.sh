@@ -19,9 +19,9 @@ dwm_battery () {
             printf "🔋 %s%% %s" "$CHARGE" "$STATUS"
         fi
     else
-        printf "^c$rose^ ﱢ ^c$foreground^[%s%%]" "$CHARGE"
+        printf "[%s%%]" "$CHARGE"
     fi
-    printf "%s\n" "$SEP2"
+    printf "%s" "$SEP2"
 }
 
 dwm_battery

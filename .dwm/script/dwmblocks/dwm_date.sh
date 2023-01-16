@@ -13,9 +13,9 @@ dwm_date () {
         printf "📆 %s" "$(date "+%a %d-%m-%y %T")"
     else
 	    #printf "^d^ ^b$surface_1^^c$foreground^ ﱢ ^b$surface_2^[%s]" "$(date "+%T)"   
-        printf "^c$magenta^ ﱢ ^c$foreground^[%s%%]" "$(date "+%T")"
+        printf "[$(date "+%H:%M")]"
     fi
-    printf "\n%s " "$SEP2"
+    printf "%s" "$SEP2"
 }
 
 dwm_date
