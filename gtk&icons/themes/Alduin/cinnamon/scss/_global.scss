@@ -4,8 +4,8 @@
 // 1.0 < 1 will result in most cinnamon surfaces being transparent
 $button_bg_color: #151515;
 $button_fg_color: #dfdfaf;
-$selected_bg_color: #252525;
-$selected_fg_color: #dfdfaf;
+$selected_bg_color: #af875f;
+$selected_fg_color: #151515;
 $tooltip_bg_color: #151515;
 $tooltip_fg_color: #dfdfaf;
 $dark_bg_color: fade-out(#1c1c1c, 1 - 1.0);
@@ -79,6 +79,6 @@ $info_bg_color: #878787;
 $roundness: 0px;
 
 // used for buttons, entrys, panel spacing, and menu item spacing.
-$spacing: 1px;
-$spacing_plus2: (1 + 2) + px;
+$spacing: 3px;
+$spacing_plus2: (3 + 2) + px;
 
